@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&family=Playfair+Display+SC:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans&family=Open+Sans&family=Playfair+Display+SC:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inder&family=Montserrat:wght@800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inder', sans-serif;
+    
+}
+body{
+    margin: 0px;
+    background: rgb(0,0,0);
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 20%, rgba(34,8,8,1) 60%, rgba(41,10,10,1) 65%, rgba(46,11,11,1) 69%, rgba(56,13,13,1) 81%, rgba(59,11,11,1) 82%, rgba(65,11,11,1) 90%, rgba(66,12,12,1) 91%, rgba(74,16,16,1) 95%, rgba(107,24,24,1) 100%, rgba(187,187,187,1) 100%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*Header*/
+header {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    align-items: center;
+}
+
+.prueba {
+    width: 40vw;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-left: 10px;
+}
+
+.prueba a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 18px 0px 18px 0px;
+}
+
+.prueba img {
+    width: 45px;
+    margin-left: 1rem;
+}
+
+.busque{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 18px 40px 18px 40px;
+    margin-right: 5%;
+}
+
+.formBusq {
+    display: flex;
+    width: 33vw;
+    height: 40px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    position: relative;
+}
+
+.formBusq input{
+    margin-left: 2vw;
+}
+.formBusq img{
+    padding-left: 28vw;
+}
+
+
+.etiqueta-busqueda {
+    margin-right: px;
+    color: black;
+}
+
+.campo-busqueda {
+    flex: 1;
+    border: none;
+    padding: 5px;
+    outline: none;
+    position: absolute;
+    display: block;
+    line-height: .3em;
+    text-align: left;
+    background: none;
+    width: 75%;
+    border-bottom: 2px solid black;
+    transition: border-bottom 0.3s;
+}
+
+.boton-busqueda {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    color: red;
+}
+
+.busqueda-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.icono-busqueda {
+    margin-left: 5px;
+    width: 35px;
+    height: 30px;
+}
+
+.content-btn{
+    width: 20vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding-right: 10%;
+
+}
+
+.content-btn img {
+    width: 20px;
+}
+
+.finStore img {
+    width: 38px;
+}
+
+.rincon-vino {
+    background-color: #A0141D;
+    height: 70px;
+    font-size: 19px;
+    font-weight: 900;
+    margin-left: -115px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 133px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 15vh;
+    right: 0;
+    width: 30vw;
+    max-height: 100vh;
+    background: rgba(255, 255, 255, 0.9);
+    overflow-y: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #231f2034;
+    padding: 20px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buscador {
+        order: 3;
+        margin-top: 10px;
+    }
+
+}
+
+
+
+.rincon-vino{
+    background-color: #A0141D ;
+    height: 70px;
+    font-size: 19px;
+    font-weight: 900;
+    margin-left: -115px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 133px;
+}
+
+/*Primer section de registro*/
+
+
+label {
+    display: inline-block; /* Hace que los labels sean en línea */
+    text-align: left;
+    width: 5cm; /* Ancho de 5 cm para los labels de Nombre y Apellidos */
+    margin: 0; /* Elimina el margen para que los labels se centren horizontalmente */
+}
+
+label:first-child {
+    text-align: right; /* Alinea el primer label (Nombre) a la derecha */
+}
+
+label::after {
+    content: attr(placeholder); /* Muestra el atributo 'placeholder' como contenido */
+    display: block;
+    font-weight: bold; /* Estilo en negrita para los nombres */
+}
+
+/* secion de login */
+
+.title_form{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+a:visited{
+    text-decoration: transparent rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.671);
+}
+a:link{
+    text-decoration: none;
+    color: white;
+}
+
+.login{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 30px; /*Arriba y abajo*/
+    min-height: calc(100vh -200px);
+    padding-bottom: 90px;
+}
+.login_container{
+    background-color: #484848; /*Color medio transparente*/
+    border: 0px solid white;
+    border-radius: 40px;
+    margin-top: 5rem;
+    color: white;
+    padding: 60px 68px 40px;
+    min-height: 700px;
+    width: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.login_container_form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 12px;
+    color: white;    
+}
+
+@media only screen and (max-width: 768px) {
+    .login_container,
+    .login_container_form {
+        width:47vw;
+        margin-left: 0;
+    }
+}
+input::placeholder {
+    color: black;
+}
+
+.oc{
+    padding-top: 4px;
+}
+.oc:hover{
+    filter: opacity(.6);
+    transition: 0.2s;
+}
+.input{
+    background-color: #fff;
+    border-left: 0px;
+    border-right: 0px; 
+    border-top: 0px;
+    border-bottom: 1px solid white;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 32px;
+    padding: 0px 20px;
+    outline: none;
+    height: 38px;
+    width: 75vh;
+}
+
+.input-n{
+    /* background-color: transparent; */
+    border-left: 0px;
+    border-right: 0px; 
+    border-top: 0px;
+    border-bottom: 2px solid white;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 32px;
+    padding: 0px 20px;
+    outline: none;
+    height: 5vh;
+    width: 30vh;
+}
+.button{
+    border: 2px transparent;
+    border-radius: 10px;
+    color: #fff;
+    
+    
+    padding: 10px;
+    background-color: #A0141D;
+    justify-content: center;
+    width: 80vh;
+}
+.button:hover {
+    filter: opacity(.5);
+    transition: 0.2s;
+}
+.container_social{
+    margin: 0px;
+    padding-top: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.container_social img{
+    margin: 0px;
+    width: 30px;
+    height: 30px;
+    padding-top: 3px;
+    padding-right: 10px;
+    align-content: center;
+}
+.container_social div  :hover{
+    filter: opacity(.6);
+    transition: 0.2s;
+}
+.reg:hover{
+    filter: opacity(.6);
+    transition: 0.2s;
+}
+
+
+/* El setion de las redes sociales */
+/* Estilos generales para las secciones */
+.section, .div, .div-o {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    background-color: #ADADAD;
+}
+
+/* Estilos para la primera parte */
+.div {
+    margin-top: 25px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.log {
+    width: 45px;
+    height: 45px;
+    opacity: 0.8;
+}
+
+h3 {
+    margin-top: 23px;
+}
+
+.div-one {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+    padding: 18px 20px; /* Ajusta el valor según tus necesidades */
+    margin-top: -18px;
+}
+
+.div-one img {
+    width: 46px;
+    height: auto;
+    margin-top: 12px;
+    margin-left: 1px;
+}
+
+/* Estilos para la segunda parte */
+.div_two {
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 18px 20px; /* Ajusta el valor según tus necesidades */
+    max-width: 100%;
+    overflow-x: auto; /* Permite el desplazamiento horizontal si el contenido es demasiado ancho */
+}
+
+.mensajeFoot {
+    line-height: 3rem;
+    width: 100%;
+}
+
+/* Estilos para la tercera parte */
+.div-o {
+    margin-top: 90px;
+    justify-content: center;
+}
+
+.div-on {
+    flex-direction: column;
+    margin-top: -50px;
+    line-height: 4rem;
+}
+
+.b {
+    width: 60px;
+    height: 54px;
+    margin: 4px;
+    margin-left: 4px;
+}
+.im{
+    width: 60px;
+    height: 54px;
+    margin: 4px;
+    margin-left: 4px;
+}
+
+/* Section de informacion final */
+
+.info{
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2rem;
+    background-color: #161616;
+}
+
+.h3 h3{
+    line-height: 40px;
+}
+
+/* section de extra */
+
+.extra{
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    background-color: #161616;
+    color: #fff;
+}
+
+.ley{
+    display: flex;
+    justify-content: center;
+
+}
+
+.whatsapp{
+    width: 190px;
+    display: flex;
+    flex-flow: wrap;
+    align-items: baseline;
+    
+    
+}
+
+.whatsapp img{
+    height: 26px;
+    padding-right: 20px;
+    
+}
+
+.correo{
+   
+    display: flex;
+    flex-flow: wrap;
+    align-items: baseline;
+}
+
+.correo img{
+    height: 26px;
+    padding-right: 20px;
+}

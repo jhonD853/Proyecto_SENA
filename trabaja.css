@@ -1,0 +1,846 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&family=Playfair+Display+SC:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans&family=Open+Sans&family=Playfair+Display+SC:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inder&family=Montserrat:wght@800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inder', sans-serif;
+    
+}
+body{
+    margin: 0px;
+    background: rgb(0,0,0);
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 20%, rgba(34,8,8,1) 60%, rgba(41,10,10,1) 65%, rgba(46,11,11,1) 69%, rgba(56,13,13,1) 81%, rgba(59,11,11,1) 82%, rgba(65,11,11,1) 90%, rgba(66,12,12,1) 91%, rgba(74,16,16,1) 95%, rgba(107,24,24,1) 100%, rgba(187,187,187,1) 100%);
+    
+}
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 30px; /*Arriba y abajo*/
+    min-height: calc(100vh -200px);
+    padding-bottom: 90px;
+    overflow: hidden;
+}
+.login_container{
+    background-color: #484848; /*Color medio transparente*/
+    border: 0px solid white;
+    border-radius: 40px;
+    margin-top: 5rem;
+    color: white;
+    padding: 60px 68px 40px;
+    min-height: 700px;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+/*Header*/
+/* Estilos del nav */
+
+header {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    align-items: center;
+}
+
+/* Menu de productos */
+#menuDesplegable {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 20%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    margin-left: 18%;
+    margin-top: 10vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#menuDesplegable ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#menuDesplegable ul li {
+    margin: 20px 0;
+}
+
+#menuDesplegable ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.closeMenu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.prueba {
+    width: 40vw;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-left: 10px;
+}
+
+.prueba a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 18px 0px 18px 0px;
+}
+
+.prueba img {
+    width: 45px;
+    margin-left: 1rem;
+}
+
+.busque{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 18px 40px 18px 40px;
+    margin-right: 5%;
+}
+
+.formBusq {
+    display: flex;
+    width: 33vw;
+    height: 40px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    position: relative;
+    padding-left: 5%;
+}
+
+.etiqueta-busqueda {
+    margin-right: px;
+    color: black;
+}
+
+.campo-busqueda {
+    flex: 1;
+    border: none;
+    padding: 5px;
+    outline: none;
+    display: block;
+    line-height: .3em;
+    text-align: left;
+    background: none;
+    width: 25vw;
+    border-bottom: 2px solid black;
+    transition: border-bottom 0.3s;
+}
+
+.boton-busqueda {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    color: red;
+}
+
+.busqueda-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.icono-busqueda {
+    background-image: url('rincon del vino/lupa.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    margin-left: 5px;
+}
+
+.content-btn{
+    width: 20vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding-right: 10%;
+
+}
+
+.content-btn img {
+    width: 20px;
+}
+
+.finStore img {
+    width: 38px;
+}
+
+.rincon-vino {
+    background-color: #A0141D;
+    height: 70px;
+    font-size: 19px;
+    font-weight: 900;
+    margin-left: -115px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 133px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 15vh;
+    right: 0;
+    width: 30vw;
+    max-height: 100vh;
+    background: rgba(255, 255, 255, 0.9);
+    overflow-y: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #231f2034;
+    padding: 20px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.styled-input {
+    width: 30vw;
+    height: 3vh;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    color: black; /* color del texto */
+    background-color: white; /* color de fondo */
+    margin-bottom: 10px; /* opcional: ajusta el espacio entre los elementos */
+}
+
+.styled-button {
+    width: 20vw;
+    height: 5vh;
+    border-radius: 5px;
+    text-align: center;
+    color: black; /* color del texto */
+    background-color: white; /* color de fondo */
+    cursor: pointer;
+}
+
+.styled-button:hover {
+    background-color: #ddd; /* color de fondo al pasar el ratón sobre el botón */
+}
+
+@media screen and (max-width: 768px) {
+    
+  
+    .campo-busqueda {
+        flex: 1;
+        border: none;
+        padding: 5px;
+        outline: none;
+        display: block;
+        line-height: .3em;
+        text-align: left;
+        background: none;
+        width: 75%;
+        border-bottom: 2px solid black;
+        transition: border-bottom 0.3s;
+    }
+    .prueba a{
+        font-size: 14px;
+    }
+    #menuDesplegable ul li a{
+        font-size: 10px;
+    }#menuDesplegable {
+        margin-left: 20%;
+        top: 15px;
+    }
+    .modal {
+     
+        top: 78px;
+        
+        width: 50vw;
+        
+        
+    }
+    .prueba {
+        width: 20vw;
+        padding-left: 5px;
+    }
+    .prueba a {
+        color: #fff;
+        padding: 18px 4px 18px 0px;
+    }
+    .prueba img {
+        width: 25px;
+        margin-left: 8px;
+    }
+    .content-btn {
+        width: 3vw;
+        margin-left: -1rem;
+       
+    }
+    .finStore img {
+        width: 30px;
+    }
+    .buscador {
+        
+        padding: 18px 10px 18px 40px;
+       
+    }
+
+}
+
+#loginModal {
+    display: none;
+}
+
+#loginModal .modal-content {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#loginModal label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#loginModal input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+#loginModal input[type="submit"] {
+    background-color: #af4c4c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#loginModal input[type="submit"]:hover {
+    background-color: #a04545;
+}
+
+#loginModal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+
+
+.rincon-vino{
+    background-color: #A0141D ;
+    height: 70px;
+    font-size: 19px;
+    font-weight: 900;
+    margin-left: -115px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 133px;
+}
+
+/*Primer section de registro*/
+
+
+label {
+    display: inline-block; /* Hace que los labels sean en línea */
+    text-align: left;
+    width: 5cm; /* Ancho de 5 cm para los labels de Nombre y Apellidos */
+    margin: 0; /* Elimina el margen para que los labels se centren horizontalmente */
+}
+
+label:first-child {
+    text-align: right; /* Alinea el primer label (Nombre) a la derecha */
+}
+
+label::after {
+    content: attr(placeholder); /* Muestra el atributo 'placeholder' como contenido */
+    display: block;
+    font-weight: bold; /* Estilo en negrita para los nombres */
+}
+
+/* secion de login */
+
+.title_form{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+a:visited{
+    text-decoration: transparent rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.671);
+}
+a:link{
+    text-decoration: none;
+    color: white;
+}
+
+.login{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 30px; /*Arriba y abajo*/
+    min-height: calc(100vh -200px);
+    padding-bottom: 90px;
+}
+.login_container{
+    background-color: #484848; /*Color medio transparente*/
+    border: 0px solid white;
+    border-radius: 40px;
+    margin-top: 5rem;
+    color: white;
+    padding: 60px 68px 40px;
+    min-height: 700px;
+    width: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.login_container_form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 12px;
+    color: white;    
+}
+
+@media only screen and (max-width: 768px) {
+    .login_container,
+    .login_container_form {
+        width:47vw;
+        margin-left: 0;
+    }
+}
+input::placeholder {
+    color: black;
+}
+
+.oc{
+    padding-top: 4px;
+}
+.oc:hover{
+    filter: opacity(.6);
+    transition: 0.2s;
+}
+.input{
+    background-color: #fff;
+    border-left: 0px;
+    border-right: 0px; 
+    border-top: 0px;
+    border-bottom: 1px solid white;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 32px;
+    padding: 0px 20px;
+    outline: none;
+    height: 38px;
+    width: 75vh;
+}
+
+.input-n{
+    /* background-color: transparent; */
+    border-left: 0px;
+    border-right: 0px; 
+    border-top: 0px;
+    border-bottom: 2px solid white;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 32px;
+    padding: 0px 20px;
+    outline: none;
+    height: 5vh;
+    width: 30vh;
+}
+.input-nn{
+    /* background-color: transparent; */
+    border-left: 0px;
+    border-right: 0px; 
+    border-top: 0px;
+    border-bottom: 2px solid white;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 32px;
+    padding: 0px 20px;
+    outline: none;
+    height: 5.5vh;
+    width: 80vh;
+}
+
+.button{
+    border: 2px transparent;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    
+    
+    padding: 10px;
+    background-color: #A0141D;
+    width: 80vh;
+}
+.button:hover {
+    filter: opacity(.5);
+    transition: 0.2s;
+}
+
+/* Media Queries para tamaños de pantalla más pequeños */
+@media (max-width: 768px) {
+    .input-n {
+       
+        height: 7.5vh;
+        width: 45vh;
+    }
+    .input-nn {
+        height: 7.5vh;
+        width: 50vh;
+    }
+}
+.input-n::-webkit-inner-spin-button,
+.input-n::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* WebKit/Blink */
+    margin: 0;
+}
+/* El setion de las redes sociales */
+/* Estilos generales para las secciones */
+
+.section, .div, .div-o {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    background-color: #ADADAD;
+}
+
+/* Estilos para la primera parte */
+.div {
+    margin-top: 25px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.log {
+    width: 45px;
+    height: 45px;
+    opacity: 0.8;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+h3 {
+    margin-top: 13px;
+}
+
+.div-one {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+    padding: 18px 20px; /* Ajusta el valor según tus necesidades */
+    margin-top: -33px;
+}
+
+.div-one img {
+    width: 46px;
+    height: auto;
+    margin-top: 12px;
+    margin-left: 1px;
+}
+
+/* Estilos para la segunda parte */
+.div_two {
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 18px 20px;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.mensajeFoot {
+    line-height: 1.5rem; /* Ajusta el interlineado según sea necesario */
+    width: 100%;
+}
+.mensajeFoot h2{
+    padding-top: 5vh;
+    font-size: 22px;
+}
+
+/* Estilos para la tercera parte */
+.div-o {
+    margin-top: 90px;
+    justify-content: center;
+}
+
+.div-on {
+    flex-direction: column;
+    margin-top: -50px;
+    line-height: 4rem;
+}
+
+.b {
+    width: 60px;
+    height: 54px;
+    margin: 4px;
+    margin-left: 4px;
+}
+.im{
+    width: 60px;
+    height: 54px;
+    margin: 4px;
+    margin-left: 4px;
+    background-image: #161616;
+
+}
+.barra-container {
+    /* width: 30%; */
+    display: inline-block; /* Asegura que el contenedor no ocupe todo el ancho */
+
+    padding: 4px; /* Ajusta el espacio entre la imagen y el fondo negro según sea necesario */
+}
+
+.barra {
+    width: 15vw;
+    height: 34px; /* Ajusta la altura automáticamente según el ancho */
+    display: block; /* Evita espacios no deseados debajo de la imagen */
+}
+
+/* Section de informacion final */
+
+.info{
+    
+    width: 100%;
+    display: flex;
+    /* flex-wrap: wrap;   Permite que los elementos se envuelvan en pantallas pequeñas */
+    justify-content: space-around;
+    padding-top: 2rem;
+    background-color: #161616;
+}
+
+.h3 h3{
+    line-height: 40px;
+}
+
+/* section de extra */
+
+.extra{
+    
+    width: 100%;
+    display: flex;
+    /* flex-wrap: wrap; Permite que los elementos se envuelvan en pantallas pequeñas */
+    justify-content: space-around;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    background-color: #161616;
+    color: #fff;
+}
+
+.ley{
+    display: flex;
+    justify-content: center;
+
+}
+
+.whatsapp{
+    width: 100%; /* O ajusta según tus necesidades */
+    max-width: 200px; /* O ajusta según tus necesidades */
+    display: flex;
+    flex-flow: wrap;
+    align-items: baseline;
+    
+    
+}
+
+.whatsapp img{
+    height: 26px;
+    padding-right: 20px;
+    
+}
+
+.correo{
+    display: flex;
+    flex-flow: wrap;
+    align-items: baseline;
+}
+
+.correo img{
+    height: 26px;
+    padding-right: 20px;
+}
+
+/* Media Queries para tamaños de pantalla más pequeños */
+@media (max-width: 768px) {
+
+    /* estlos de los input psra seccionar el pdf */
+    .styled-input {
+        width: 40vw;
+        height: 4vh;
+        
+    }
+    .styled-button {
+        width: 30vw;
+        height: 5vh;
+    }
+    .div_two {
+        font-size: 10px;
+    }
+    .barra {
+    width: 7em;
+    height: 34px;
+    display: block;
+    }
+    .im {
+        width: 60px;
+        height: 54px;
+        margin: 4px;
+        margin-left: 4px;
+        margin-top: -5px;
+        top: 12px;
+        background-image: #161616;
+    }
+
+    .info {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 2rem;
+        background-color: rgb(22, 22, 22);
+    }
+    .mensajeFoot h2{
+        padding-top: 5vh;
+        font-size: 14px;
+    }
+    h3 {
+        margin-top: 0;
+        font-size: 13px;
+        text-align: center;
+    }
+    .correo h3{
+        font-size: 6px;
+    }
+    
+    .whatsapp img {
+        height: 15px;
+        padding-right: 4px;
+    }
+    .correo img {
+        height: 15px;
+        padding-right: 4px;
+    }
+    
+    .div-one {
+    
+        gap: 10px;
+        margin-top: 0;
+        padding: 10px; /* Ajusta el relleno según sea necesario */
+    }
+    
+    .div-one img {
+        width: 30px; /* Ajusta el tamaño de la imagen según sea necesario */
+        margin-top: 0;
+    }
+    
+    .div_two {
+     
+        text-align: center;
+    }
+    
+    .div-o {
+        margin-top: 80px;
+        justify-content: center;
+    }
+    
+    .div-on {
+        flex-direction: row;
+        line-height: 2rem;
+    }
+    
+    .b,
+    .im {
+        width: 30px; /* Ajusta el tamaño de la imagen según sea necesario */
+    }
+    
+    
+    .extra {
+        /* flex-direction: column; */
+
+        align-items: center;
+    }
+    
+    .whatsapp,
+    .correo {
+        width: 100%;
+        max-width: none;
+    }
+}
+

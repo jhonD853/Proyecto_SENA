@@ -1,0 +1,659 @@
+@import url('https://fonts.googleapis.com/css2?family=Inder&family=Montserrat:wght@800&display=swap');
+*{
+    margin: 0;
+    font-family: 'Inder', sans-serif;    
+}
+
+/* Estilos del nav */
+
+header {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    align-items: center;
+}
+
+/* Menu de productos */
+#menuDesplegable {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    margin-left: 18%;
+    margin-top: 10vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#menuDesplegable ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#menuDesplegable ul li {
+    margin: 20px 0;
+}
+
+#menuDesplegable ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.closeMenu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.prueba {
+    width: 40vw;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-left: 10px;
+}
+
+.prueba a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 18px 0px 18px 0px;
+}
+
+.prueba img {
+    width: 45px;
+    margin-left: 1rem;
+}
+
+.busque{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 18px 40px 18px 40px;
+    margin-right: 5%;
+}
+
+.formBusq {
+    display: flex;
+    width: 33vw;
+    height: 40px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    position: relative;
+}
+
+.formBusq input{
+    margin-left: 2vw;
+}
+.formBusq img{
+    padding-left: 28vw;
+}
+
+
+.etiqueta-busqueda {
+    margin-right: px;
+    color: black;
+}
+
+.campo-busqueda {
+    flex: 1;
+    border: none;
+    padding: 5px;
+    outline: none;
+    position: absolute;
+    display: block;
+    line-height: .3em;
+    text-align: left;
+    background: none;
+    width: 75%;
+    border-bottom: 2px solid black;
+    transition: border-bottom 0.3s;
+}
+
+.boton-busqueda {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    color: red;
+}
+
+.busqueda-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.icono-busqueda {
+    margin-left: 5px;
+    width: 35px;
+    height: 30px;
+}
+
+.content-btn{
+    width: 20vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding-right: 10%;
+
+}
+
+.content-btn img {
+    width: 20px;
+}
+
+.finStore img {
+    width: 38px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 15vh;
+    right: 0;
+    width: 30vw;
+    max-height: 100vh;
+    background: rgba(255, 255, 255, 0.9);
+    overflow-y: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #231f2034;
+    padding: 20px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buscador {
+        order: 3;
+        margin-top: 10px;
+    }
+
+}
+
+#loginModal {
+    display: none;
+}
+
+#loginModal .modal-content {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#loginModal label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#loginModal input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+#loginModal input[type="submit"] {
+    background-color: #af4c4c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#loginModal input[type="submit"]:hover {
+    background-color: #a04545;
+}
+
+
+#loginModal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+/* Estilo nombre de la pagina */
+
+.rincon-vino{
+    background-color: #A0141D ;
+    height: 70px;
+    font-size: 19px;
+    font-weight: 900;
+    margin-left: -115px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 133px;
+}
+
+/** Estilos de la imagen de presentacion **/
+body{    
+    overflow-x: hidden;
+}
+.present{
+    display: flex;
+}
+.imgInicial{
+    width: 100vw;
+    height: 450px;
+    overflow: hidden;    
+}
+.titleOffer{
+    align-self: last baseline;
+    position: absolute;
+    font-size: 80px;
+    color: white;
+    width: 50%;
+    line-height: 100px;
+    padding-left: 3vw;
+}
+/** Estilo de la introduccion **/
+.pagPri{
+    display: flex;
+    flex-flow: wrap;
+    height: 800px;
+    width: 100vw;
+}
+.intro{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    min-height: 50%;
+    width: 22vw;
+    height: 800px;
+    font-size: 22px;
+    align-items: center;
+    text-justify: distribute-all-lines;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.884);
+}
+.vinBox{
+    display: flex;
+    flex-flow: wrap;
+    overflow: auto;
+    width: 74%;
+    height: 800px;
+}
+.vinProd{
+    width: 30%;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    min-height: 50%;
+    justify-content: center;
+    
+}
+.vinProd input {
+    width: 50%;
+    margin: auto;
+}
+.vinProd button {
+    width: 60%;
+    margin: auto;
+}
+.vinBox::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.vinBox::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.vinBox::-webkit-scrollbar-button:increment,.vinBox::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.vinBox::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.vinBox::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.vinBox::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
+/* Estilos carrousel */
+.favMarc {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+.favMarc h1{
+    padding-left: 10px;    
+}
+.h1Marc{   
+    font-size: 25px; 
+    -webkit-text-stroke: 2px #A0141D;
+}
+.h1Bord{
+    font-size: 25px;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    text-shadow: -2.5px -2.5px 0 #A0141D, 2.5px -2.5px 0 #A0141D, -2.5px 2.5px 0 #A0141D, 2.5px 2.5px 0 #A0141D;
+}
+
+
+.carr{    
+    background: #D9D9DE;
+}
+
+.carrVin {
+    background: #D9D9DE;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100vw;
+    height: 150px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.carrVin-viewport {
+    display: flex;
+    overflow: hidden;
+    width: 100vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.carrVin-slides {
+    display: flex;
+    width: 100vw;
+}
+
+.carrVin-slide {
+    flex: 0 0 100px;
+    margin-right: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carrVin-slide.active {
+    opacity: 1;
+    visibility: visible;
+    margin-left: calc((100% - 100px) / 2);
+}
+
+.carrVin-slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100vw; /* Ajuste para ocupar todo el ancho de la pantalla */
+}
+
+.carrVin-button-left {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 80px;
+    cursor: pointer;
+    margin-left: 20vw;
+    font-size: 20px;
+}
+
+.carrVin-button-right {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 80px;
+    cursor: pointer;
+    margin-right: 20vw;
+    font-size: 20px;
+}
+
+/* Footer */
+
+footer{
+    font-size: 18px;
+}
+.section {
+
+    /* margin-top: 100px; */
+
+    width: 100%;
+    display: flex;
+    background-color: #ADADAD;
+    
+}
+.divLog{
+    margin-top: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;    
+    background-color: #ADADAD;    
+}
+
+.log{
+    padding-top: 20px;
+    width: 46px;
+    height: 90px;
+    /* filter: brightness(0.7); */ 
+}
+
+.h3{
+    margin-top: 23px;
+}
+.div-one{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    padding: 18px 40px 18px 40px;
+    margin-top: -18px;
+    margin-left: -15px;
+    
+}
+
+.divLog {
+  
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+.divLog img {
+    width: 100%;
+    height: auto;
+    margin-top: 19px;
+    margin-left: 1px;
+    width: 46px;
+}
+
+.div_two{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 18px 40px 18px 40px;
+    width: 150rem;
+}
+
+.h2 h2{
+    line-height: 50px;
+}
+/* Experimento */
+.div-o{
+    margin-top: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    background-color: #ADADAD;
+    
+}
+
+.div-on{
+    flex-direction: column;
+    margin: 0px;   
+    line-height: 50px;       
+}
+
+.div-on img{
+    width: 60px;
+    height: 40px;
+    margin: 4px;
+    margin-left: 18px;
+    opacity: .8;
+}
+
+/* Section de informacion final */
+
+.info{
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2rem;
+    background-color: #161616;
+}
+
+
+
+h3{
+    line-height: 50px;
+    text-align: left;
+}
+
+/* section de extra */
+
+.extra{
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    background-color: #161616;
+    color: #fff;
+}
+
+.ley{
+    display: flex;
+    justify-content: center;
+
+}
+
+.whatsapp{
+    width: 190px;
+    display: flex;
+    flex-flow: wrap;
+    align-items: baseline;
+    
+    
+}
+
+.whatsapp img{
+    height: 26px;
+    padding-right: 20px;
+    
+}
+
+.correo{
+   
+    display: flex;
+    flex-flow: wrap;
+    align-items: baseline;
+}
+
+.correo img{
+    height: 26px;
+    padding-right: 20px;
+}
+
+.politica{
+    padding-bottom: 20px;
+    width: 100%;
+    font-size: 14px;
+}
+
+
+u{
+    color: rgb(7, 7, 141);
+}
